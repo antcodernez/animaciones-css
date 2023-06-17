@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo</title>
+    <style>
+        *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+        :root
+            {
+                --background-color: #C8B8F5;
+                --color-text: black;
+                --bunny-color:#ffff;
+                --color-mountain: rgb(47, 209, 47);
+                --color-dirt: rgb(134, 84, 61);
+            }
+        body
+            {
+                height: 100vh;
+                display: grid;
+                place-items: center;
+            }
+        .phone
+            {
+                position: relative;
+                border: 6px solid black;
+                border-radius: 20px;
+                width: 320px;
+                height: 600px;
+                background-color: var(--background-color);
+                box-shadow: 0 19px 38px rgba(0, 0, 0,0.30),
+                0 15px 12px rgba(0, 0, 0,0.22);
+            }
+        .layer-1
+            {
+                position: absolute;
+                z-index: 1;
+                height: 430px;
+                width: 80px;
+                background-color: var(--bunny-color);
+                bottom: 0;
+                right: calc(32% - 40px);
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+            }
+        .layer-2
+            {
+                position: absolute;
+                z-index: 2;
+                height: 430px;
+                width: 80px;
+                background-color: var(--bunny-color);
+                bottom: 0;
+                left: calc(32% - 40px);
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+            }
+        .layer-3
+            {
+                position: absolute;
+                z-index: 3;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0 auto;
+                width: 220px;
+                height: 400px;
+                background-color: var(--color-mountain);
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                box-shadow: 14px 0px 27px rgba(0, 0, 0, 0.607);
+            }
+        .layer-3 div
+            {
+                width: inherit;
+                height: 20px;
+                background-color: var(--color-dirt);
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+                box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
+            }
+        .layer-4
+            {
+                position: absolute;
+                z-index: 4;
+                height: 292px;
+                width: 80px;
+                background-color: var(--bunny-color);
+                bottom: 0;
+                left: 36px;
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+            }
+        .layer-5
+            {
+                position: absolute;
+                z-index: 5;
+                left: 0;
+                bottom: 0;
+                width: 220px;
+                height: 260px;
+                background-color: var(--color-mountain);
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                border-bottom-left-radius: 16px;
+                box-shadow: 14px 0px 27px rgba(0, 0, 0, 0.607);
+            }
+        .layer-5 div
+            {
+                width: inherit;
+                height: 20px;
+                background-color: var(--color-dirt);
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+                box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
+            }
+        .layer-6
+            {
+                position: absolute;
+                z-index: 6;
+                height: 230px;
+                width: 80px;
+                background-color: var(--bunny-color);
+                bottom: 0;
+                right: 32px;
+                border-top-left-radius: 32px;
+                border-top-right-radius: 32px;
+                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+            }
+        .layer-7 
+            {
+                position: absolute;
+                z-index: 7;
+                right: 0;
+                bottom: 0;
+                width: 180px;
+                height: 200px;
+                background-color: var(--color-mountain);
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 16px;
+                box-shadow: 14px 0px 27px rgba(0, 0, 0, 0.607);
+            }
+        .layer-7 div
+            {
+                width: inherit;
+                height: 20px;
+                background-color: var(--color-dirt);
+                border-top-left-radius: inherit;
+                border-top-right-radius: inherit;
+                box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
+            }
+        .layer-8
+            {
+                position: absolute;
+                z-index: 8;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 60%;
+                height: 90px;
+                background-color: var(--bunny-color);
+                border-top-left-radius: 30%;
+                border-top-right-radius: 30%;
+            }
+        .layer-8 .one
+            {
+                position: absolute;
+                width: 120px;
+                height: 70px;
+                left: calc(50% - 60px);
+                top: -25px;
+                background-color: var(--bunny-color);
+                border-radius: 50%;
+            }
+        .layer-9
+            {
+                position: absolute;
+                z-index: 9;
+                bottom: 0;
+                width: 40%;
+                height: 80px;
+                background-color: green;
+                border-bottom-left-radius: 12px;
+                border-top-right-radius: 40px;
+            }
+        .layer-9 .one
+            {
+                position: absolute;
+                top: -34px;
+                width: 70%;
+                height: 80px;
+                background-color: green;
+                border-top-right-radius: 40px;
+            }
+        .layer-10
+            {
+                position: absolute;
+                z-index: 10;
+                right: 0;
+                bottom: 0;
+                width: 40%;
+                height: 80px;
+                background-color: green;
+                border-bottom-right-radius: 12px;
+                border-top-left-radius: 40px;
+            }
+        .layer-10 .one
+            {
+                position: absolute;
+                top: -34px;
+                right: 0;
+                width: 70%;
+                height: 80px;
+                background-color: green;
+                border-top-left-radius: 40px;
+            }
+    </style>
+</head>
+<body>
+    <section class="phone">
+        <div class="layer-1"></div>
+        <div class="layer-2"></div>
+        <div class="layer-3">
+            <div></div>
+        </div>
+        <div class="layer-4"></div>
+        <div class="layer-5">
+            <div></div>
+        </div>
+        <div class="layer-6">
+        </div>
+        <div class="layer-7">
+            <div></div>
+        </div>
+        <div class="layer-8">
+            <div class="one"></div>     
+        </div>
+        <div class="layer-9">
+            <div class="one"></div>
+        </div>
+        <div class="layer-10">
+            <div class="one"></div>
+        </div>
+    </section>
+    <section class="desktop">
+    </section>
+</body>
+</html>

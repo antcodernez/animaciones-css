@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooter de cotejitos</title>
+    <style>
+        body
+            {
+                counter-reset: game;
+            }
+        input:checked  
+            {
+                counter-increment: game;
+            }
+        .total-counter::after
+            {
+                content: counter(game);
+            }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox" name="" id="">
+            <div class="shield"></div>
+        </li>
+    </ul>
+    <h3 class="total-counter">Score: </h3>
+</body>
+</html>
