@@ -265,43 +265,89 @@ body
                 border-top-right-radius: 10px;
                 
             }
-        .head
-            {
-                position: absolute;                
-                height: 430px;
-                bottom: 0;
-                width: 80px;
-                border-top-left-radius: 32px;
-                border-top-right-radius: 32px;
-                background-color: var(--bunny-color-real);
-                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+.head
+    {
+        position: absolute;                
+        height: 430px;
+        bottom: 0;
+        width: 80px;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        background-color: var(--bunny-color-real);
+        box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
 
-                animation-name: blink;
-                
-            }
-        .head__eye
-            {
+    }
+.head__eye
+    {
 
-                position: absolute;
-                top: 15px;
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background-color: var(--color-eye-bunny);
-            }
-        .head__eye--left
-            {
-                left: calc(50% - 16px);
-            }
-        .head__eye--right
-            {
-                right: calc(50% - 16px);
-            }
-        .head-level-2
-            {
-                height: 290px;
-            }
-        .head-level-3
-            {
-                height: 230px;
-            }
+        position: absolute;
+        top: 15px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--color-eye-bunny);
+        animation-name: blink;
+        /* le estamos danto un nombre a la animacion, puede ser cualquier nombre */
+        animation-duration: 2s;
+        /* animation-duration: pueden ser segundos o milisegundos; */
+        animation-iteration-count: infinite;
+        transform: scaleY(1);
+    }
+
+/* aqui ocurre la animacion */
+
+@keyframes blink
+{
+    /* punto A */
+    0%
+        {
+            transform: scaleY(1);
+        }
+    /* punto B*/
+    5%
+        {
+            transform: scaleY(0.2);
+
+        }
+
+    /* punto C*/
+    10%
+        {
+            transform: translate((0px, 0px));
+            transform: scaleY(1);
+        }
+}
+
+/* Van a suceder cosas entre los % pero no es necesario llegar a 100, en este caso voy de 0% hasta el 10% */
+
+/* Los porcentajes pueden ser los que yo quiera, pero lo más importante a tener en cuenta es que mientras más cerca esté un porcentaje de otro más rápido será la transición de un punto a otro */
+
+/* Otra manera de hacer animaciones con las palabras reservadas from y to */
+/* @keyframes blink
+{
+    from
+        {
+            
+        }
+    to
+        {
+
+        }
+    
+} */
+.head__eye--left
+    {
+        left: calc(50% - 16px);
+    }
+.head__eye--right
+    {
+        right: calc(50% - 16px);
+    }
+.head-level-2
+    {
+        height: 290px;
+    }
+.head-level-3
+    {
+        height: 230px;
+    }
