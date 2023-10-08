@@ -115,98 +115,98 @@ body
         box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
     }
 .layer-6
+    {
+        position: absolute;
+        z-index: 6;
+        height: 230px;
+        width: 80px;
+        bottom: 0;
+        right: 32px;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
+    }
+.layer-7 
+    {
+        position: absolute;
+        z-index: 7;
+        right: 0;
+        bottom: 0;
+        width: 180px;
+        height: 200px;
+        background-color: var(--color-mountain);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 16px;
+        box-shadow: 14px 0px 27px rgba(0, 0, 0, 0.607);
+    }
+.layer-7 div
+    {
+        width: inherit;
+        height: 20px;
+        background-color: var(--color-dirt);
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
+    }
+.layer-8
+    {
+        position: absolute;
+        z-index: 8;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 60%;
+        height: 90px;
+        background-color: var(--bunny-color-real);
+        border-top-left-radius: 30%;
+        border-top-right-radius: 30%;
+    }
+.layer-8 .one
+    {
+        position: absolute;    
+        width: 120px;
+        height: 70px;
+        left: calc(50% - 60px);
+        top: -25px;        
+        background-color: var(--bunny-color-real);
+        border-radius: 50%;
+    }
+.layer-9
+    {
+        position: absolute;
+        z-index: 9;
+        bottom: 0;        
+        width: 40%;
+        height: 80px;
+        background-color: green;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 40px;
+
+        & .one
             {
-                position: absolute;
-                z-index: 6;
-                height: 230px;
-                width: 80px;
-                /* background-color: var(--bunny-color); */
-                bottom: 0;
-                right: 32px;
-                border-top-left-radius: 32px;
-                border-top-right-radius: 32px;
-                box-shadow: 13px 9px 10px rgba(0, 0, 0, 0.512);
-            }
-        .layer-7 
-            {
-                position: absolute;
-                z-index: 7;
-                right: 0;
-                bottom: 0;
-                width: 180px;
-                height: 200px;
-                background-color: var(--color-mountain);
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px;
-                border-bottom-right-radius: 16px;
-                box-shadow: 14px 0px 27px rgba(0, 0, 0, 0.607);
-            }
-        .layer-7 div
-            {
-                width: inherit;
-                height: 20px;
-                background-color: var(--color-dirt);
-                border-top-left-radius: inherit;
-                border-top-right-radius: inherit;
-                box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.399);
-            }
-        .layer-8
-            {
-                position: absolute;
-                z-index: 8;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 60%;
-                height: 90px;
-                background-color: var(--bunny-color-real);
-                border-top-left-radius: 30%;
-                border-top-right-radius: 30%;
-            }
-        .layer-8 .one
-            {
-                position: absolute;
-                width: 120px;
-                height: 70px;
-                left: calc(50% - 60px);
-                top: -25px;
-                background-color: var(--bunny-color-real);
-                border-radius: 50%;
-            }
-        .layer-9
-            {
-                position: absolute;
-                z-index: 9;
-                bottom: 0;
-                width: 40%;
-                height: 80px;
-                background-color: green;
-                border-bottom-left-radius: 12px;
-                border-top-right-radius: 40px;
-            }
-        .layer-9 .one
-            {
-                position: absolute;
+                position: absolute;        
                 top: -34px;
                 width: 70%;
                 height: 80px;
-                background-color: green;
+                background-color: green;        
                 border-top-right-radius: 40px;
             }
-        .layer-10
-            {
-                position: absolute;
-                z-index: 10;
-                right: 0;
-                bottom: 0;
-                width: 40%;
-                height: 80px;
-                background-color: green;
-                border-bottom-right-radius: 12px;
-                border-top-left-radius: 40px;
-            }
-        .layer-10 .one
+    }
+.layer-10
+    {
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+        height: 80px;
+        background-color: green;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 40px;
+
+        & .one
             {
                 position: absolute;
                 top: -34px;
@@ -216,55 +216,55 @@ body
                 background-color: green;
                 border-top-left-radius: 40px;
             }
-        .left-ear--outer
-            {
-                position: absolute;
-                top: -33px;
-                left: 8px;
-                width: 20px;
-                height: 50px;
-                border-radius: 90%;
-                background-color: var(--bunny-color-real);
-                transform: rotate(-25deg);
-                box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.678);
-            }
-        .left-ear--inner
-            {
-                position: absolute;
-                top: -29px;
-                left: 12px;
-                width: 10px;
-                height: 38px;
-                background-color: var(--color-bunny-ear);
-                transform: rotate(-25deg);
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-            }
-        .right-ear--outer
-            {
-                position: absolute;
-                top: -33px;
-                left: 53px;
-                width: 20px;
-                height: 50px;
-                border-radius: 90%;
-                background-color: var(--bunny-color-real);
-                transform: rotate(25deg);
-                box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.678);
-            }
-        .right-ear--inner
-            {
-                position: absolute;
-                top: -29px;
-                left: 58px;
-                width: 10px;
-                height: 38px;
-                background-color: var(--color-bunny-ear);
-                transform: rotate(25deg);
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                
-            }
+    }
+.left-ear--outer
+    {
+        position: absolute;
+        top: -33px;
+        left: 8px;
+        width: 20px;
+        height: 50px;
+        border-radius: 90%;
+        background-color: var(--bunny-color-real);
+        transform: rotate(-25deg);
+        box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.678);
+    }
+.left-ear--inner
+    {
+        position: absolute;
+        top: -29px;
+        left: 12px;
+        width: 10px;
+        height: 38px;
+        background-color: var(--color-bunny-ear);
+        transform: rotate(-25deg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+.right-ear--outer
+    {
+        position: absolute;
+        top: -33px;
+        left: 53px;
+        width: 20px;
+        height: 50px;
+        border-radius: 90%;
+        background-color: var(--bunny-color-real);        
+        transform: rotate(25deg);
+        box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.678);
+    }
+.right-ear--inner
+    {
+        position: absolute;
+        top: -29px;
+        left: 58px;
+        width: 10px;
+        height: 38px;
+        background-color: var(--color-bunny-ear);
+        transform: rotate(25deg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 .head
     {
         position: absolute;                
@@ -319,9 +319,7 @@ body
 }
 
 /* Van a suceder cosas entre los % pero no es necesario llegar a 100, en este caso voy de 0% hasta el 10% */
-
 /* Los porcentajes pueden ser los que yo quiera, pero lo más importante a tener en cuenta es que mientras más cerca esté un porcentaje de otro más rápido será la transición de un punto a otro */
-
 /* Otra manera de hacer animaciones con las palabras reservadas from y to */
 /* @keyframes blink
 {
