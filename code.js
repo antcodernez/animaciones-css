@@ -7,8 +7,9 @@ bunnys.forEach(bunny => {
         
         if(scoreNumber == 10)
             {
-                scoreNumber = 0;
+                scoreNumber = 0; 
                 alert("You win! :D");
+                score.innerHTML = 0;
             }
         else
             {
